@@ -19,7 +19,7 @@ app.get('/greet/:name', (req, res) => {
 app.get('/email/:email', (req, res) => {
     var email = req.params.email;
     //console.log(email);
-    console.log(isValidEmail(email));
+    //console.log(isValidEmail(email));
     res.send(isValidEmail(email));
 
 })
