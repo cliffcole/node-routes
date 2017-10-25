@@ -21,7 +21,6 @@ app.get('/email/:email', (req, res) => {
     //console.log(email);
     //console.log(isValidEmail(email));
     res.send(isValidEmail(email));
-
 })
 app.get('/year', (req, res) => {
     var age = req.query.age;
