@@ -8,7 +8,7 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
 isValidEmail = (email) => {
-    var re = new RegExp("/\S+@\S+\.\S+/");
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
 }
 app.get('/greet/:name', (req, res) => {
