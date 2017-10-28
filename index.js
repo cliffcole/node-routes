@@ -1,5 +1,5 @@
 const express = require('express');
-const validator = require('express-validator');
+
 
 
 const app = express();
@@ -18,8 +18,6 @@ app.get('/greet/:name', (req, res) => {
 })
 app.get('/email/:email', (req, res) => {
     var email = req.params.email;
-    //console.log(email);
-    //console.log(isValidEmail(email));
     res.send(isValidEmail(email));
 })
 app.get('/year', (req, res) => {
